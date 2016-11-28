@@ -1,6 +1,7 @@
 #video {
   height: 520px;
   position: relative;
+  overflow: hidden;
 }
 
 #video .dark {
@@ -14,9 +15,10 @@
 
 #video video {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  transform: translate(-50%, -50%);
 }
 
 #video .button {

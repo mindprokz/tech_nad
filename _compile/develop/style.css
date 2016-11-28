@@ -192,6 +192,8 @@ h2 {
   background-size: cover;
   height: 665px;
   padding-top: 255px; }
+  #main .container {
+    max-width: 1170px; }
 
 #main h1 {
   background: url("images/sprite.png") no-repeat 0 0;
@@ -214,7 +216,7 @@ h2 {
     transform: translateX(-100%); }
   #main .icon_list .icon1 {
     background: url("images/sprite.png") no-repeat 0 -130px;
-    width: 265px;
+    width: 246px;
     height: 130px;
     float: left; }
   #main .icon_list .icon2 {
@@ -229,18 +231,24 @@ h2 {
     float: left; }
   #main .icon_list .icon4 {
     background: url("images/sprite.png") no-repeat 0 -260px;
-    width: 237px;
+    width: 225px;
     height: 130px;
     float: left; }
   #main .icon_list .icon5 {
     background: url("images/sprite.png") no-repeat -237px -260px;
-    width: 216px;
+    width: 178px;
+    height: 130px;
+    float: left; }
+  #main .icon_list .icon6 {
+    background: url("images/sprite.png") no-repeat -6px -393px;
+    width: 230px;
     height: 130px;
     float: left; }
 
 #video {
   height: 520px;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 #video .dark {
   background: rgba(0, 0, 0, 0.5);
@@ -252,9 +260,10 @@ h2 {
 
 #video video {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%); }
+  width: 100%;
+  transform: translate(-50%, -50%); }
 
 #video .button {
   position: absolute;
@@ -294,6 +303,9 @@ h2 {
     line-height: 25px;
     width: 388px;
     color: #3b3b3b; }
+    #services .serv_info .list .text a {
+      color: #f3430e;
+      border-bottom: 1px dotted; }
   #services .serv_info .list .icon_1 {
     background: url("images/sprite.png") no-repeat -512px -132px;
     height: 82px;
@@ -306,14 +318,20 @@ h2 {
     width: 82px;
     float: left;
     margin-right: 25px; }
+  #services .serv_info .list .icon_3 {
+    background: url("images/sprite.png") no-repeat -512px -448px;
+    height: 82px;
+    width: 82px;
+    float: left;
+    margin-right: 25px; }
 
 #services .serv_info .for_who {
   float: left;
   width: 440px;
   border-left: 1px solid #d0d0d0;
-  height: 190px;
+  height: 285px;
   padding-left: 35px;
-  padding-top: 15px; }
+  padding-top: 60px; }
   #services .serv_info .for_who h3 {
     font-size: 40px;
     color: #414141;
@@ -489,7 +507,7 @@ h2 {
     padding-bottom: 20px; }
 
 #accred .container-fixed {
-  padding-bottom: 60px;
+  padding-bottom: 9px;
   background: url("images/diploma.jpg") no-repeat top center; }
 
 #accred p {
@@ -500,7 +518,12 @@ h2 {
 #accred .container a {
   display: block;
   height: 690px;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
+  #accred .container a img {
+    position: absolute;
+    top: 56px;
+    left: 57px; }
   #accred .container a .zoom {
     background: url("images/sprite.png") no-repeat -553px -361px;
     width: 62px;
@@ -509,6 +532,21 @@ h2 {
     bottom: 100px;
     left: 50%;
     transform: translateX(-50%); }
+
+#accred .container .ol {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-align: center; }
+  #accred .container .ol .li {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    border: 2px solid #8b8b8b;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer; }
+    #accred .container .ol .li.active, #accred .container .ol .li:hover {
+      border: 2px solid #ef802f; }
 
 #projects {
   background: url("images/projects.jpg") no-repeat center center;

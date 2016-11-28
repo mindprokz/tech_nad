@@ -25,6 +25,11 @@
     line-height: 25px;
     width: 388px;
     color: $gray_text;
+
+    a {
+      color: #f3430e;
+      border-bottom: 1px dotted;
+    }
   }
 
   .icon_1 {
@@ -42,15 +47,23 @@
     float: left;
     margin-right: 25px;
   }
+
+  .icon_3 {
+    background: url($sprite) no-repeat -512px -448px;
+    height: 82px;
+    width: 82px;
+    float: left;
+    margin-right: 25px;
+  }
 }
 
 #services .serv_info .for_who {
   float: left;
   width: 440px;
   border-left: 1px solid #d0d0d0;
-  height: 190px;
+  height: 285px;
   padding-left: 35px;
-  padding-top: 15px;
+  padding-top: 60px;
 
   h3 {
     font-size: 40px;

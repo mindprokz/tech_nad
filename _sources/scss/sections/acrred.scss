@@ -1,5 +1,5 @@
 #accred .container-fixed {
-  padding-bottom: 60px;
+  padding-bottom: 9px;
   background: url('images/diploma.jpg') no-repeat top center;
 }
 
@@ -13,6 +13,13 @@
   display: block;
   height: 690px;
   position: relative;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    top: 56px;
+    left: 57px;
+  }
 
   .zoom {
     background: url($sprite) no-repeat -553px -361px;
@@ -22,5 +29,26 @@
     bottom: 100px;
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+
+#accred .container .ol {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-align: center;
+
+  .li {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    border: 2px solid #8b8b8b;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+
+    &.active,
+    &:hover {
+      border: 2px solid #ef802f;
+    }
   }
 }
