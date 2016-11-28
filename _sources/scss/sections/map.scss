@@ -1,0 +1,58 @@
+#map_contact .container-fixed {
+  height: 450px;
+}
+
+#map_contact #map {
+  height: 100%;
+  width: 50%;
+  float: left;
+}
+
+#map_contact .contact {
+  height: 100%;
+  width: 50%;
+  float: left;
+  background: $white;
+  padding: 30px 60px;
+  color: $gray_text;
+
+  h3 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 50px;
+  }
+
+  h4 {
+    font-size: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid #dcdcdc;
+  }
+
+  .ques {
+    font-weight: 700;
+    font-size: 25px;
+    padding-top: 30px;
+  }
+
+  .man {
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  .button {
+    display: block;
+    float: left;
+    color: $white;
+    text-transform: uppercase;
+    height: 51px;
+    background: $light_red;
+    border: none;
+    border-bottom: 2px solid $dark_red;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 16px 50px 0;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,109 @@
+#reviews .container-fixed {
+  background: #f5f5f5;
+  padding-bottom: 85px;
+}
+
+#reviews .list_reviews {
+  padding-top: 80px;
+}
+
+#reviews .list_reviews .elem_review {
+  float: left;
+  margin-left: 15px;
+  margin-right: 15px;
+  cursor: pointer;
+  display: block;
+  width: 210px;
+
+  .image {
+    position: relative;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      min-width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .line {
+      width: 90%;
+      height: 90%;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 2px solid rgba($white, 0.6);
+      background: rgba($white, 0);
+      transition: background, border 0.3s, 0.3s ease, ease;
+
+      .watch {
+        width: 104px;
+        height: 34px;
+        background: url($sprite) no-repeat -553px -314px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        transition: opacity 0.3s ease;
+      }
+    }
+  }
+
+  .text {
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 20px;
+
+    .play {
+      background: url($sprite) no-repeat -553px -270px;
+      width: 23px;
+      height: 29px;
+      float: left;
+      margin-right: 10px;
+      margin-top: 3px;
+    }
+
+    .status {
+      font-size: 15px;
+      color: $gray_text;
+      transition: color 0.3s ease;
+    }
+
+    .name {
+      text-transform: uppercase;
+      font-size: 18px;
+      color: $gray_text;
+      transition: color 0.3s ease;
+      padding-top: 4px;
+    }
+  }
+
+  &:hover {
+    .line {
+      border: 2px solid rgba(#f08d6c, 0.6);
+      background: rgba($white, 0.4);
+
+      .watch {
+        opacity: 1;
+      }
+    }
+
+    .play {
+      background: url($sprite) no-repeat -593px -270px;
+    }
+
+    .status {
+      color: #f2561f;
+    }
+
+    .name {
+      color: #f2561f;
+    }
+  }
+}

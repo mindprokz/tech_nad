@@ -1,0 +1,82 @@
+#navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+#navigation .container {
+  position: relative;
+}
+
+#navigation img {
+  float: left;
+  padding-right: 55px;
+}
+
+#navigation nav {
+  float: left;
+  margin-top: 30px;
+
+  a {
+    float: left;
+    margin-left: 16px;
+    margin-right: 16px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    color: $white;
+    transition: border 0.3s ease;
+    padding-bottom: 4px;
+    font-size: 13px;
+
+    &:hover {
+      border-bottom: 2px solid #d2daec;
+    }
+  }
+}
+
+#navigation .contact {
+  color: $white;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  text-align: right;
+  width: 180px;
+
+  .num {
+    font-size: 20px;
+    margin-bottom: 20px;
+    float: left;
+    width: 181px;
+  }
+
+  .mail {
+    font-size: 15px;
+    float: right;
+    border-bottom: 1px solid #688cc9;
+  }
+}
+
+#navigation.float_menu {
+  background: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  nav {
+    margin-top: 55px;
+
+    a {
+      color: #424242;
+
+      &:hover {
+        color: #fb7d11;
+        border-bottom: 2px solid #fb7d11;
+      }
+    }
+  }
+
+  .contact {
+    color: #424242;
+    top: 10px;
+    width: 380px;
+  }
+}

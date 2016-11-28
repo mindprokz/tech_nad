@@ -1,0 +1,26 @@
+#accred .container-fixed {
+  padding-bottom: 60px;
+  background: url('images/diploma.jpg') no-repeat top center;
+}
+
+#accred p {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#accred .container a {
+  display: block;
+  height: 690px;
+  position: relative;
+
+  .zoom {
+    background: url($sprite) no-repeat -553px -361px;
+    width: 62px;
+    height: 62px;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

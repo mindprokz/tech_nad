@@ -1,33 +1,44 @@
 // Принимает объект с настройками для меню
 export default class FloatMenu{
   // @params - object
-  construnctor(params){
-    this.elem = params.elem;
-    this.height = params.height;
-    this.first_class = params.first_class;
-    this.second_class = params.second_class;
-    this.active_class = params.first_class;
-  }
 
-  init(){
+  init(params, callbackStart, callbackEnd){
+    var param = {};
+    param.elem = params.elem;
+    param.height = params.height;
+    param.first_class = params.first_class;
+    param.second_class = params.second_class;
+    param.active_class = params.first_class;
 
-    if(window.pageYOffset > this.height){
-      this.elem.classList.add(this.first_class);
-      this.elem.classList.add(this.second_class);
+    if(window.pageYOffset > param.height){
+      param.elem.classList.add(param.first_class);
+      param.elem.classList.add(param.second_class);
+      if (callbackStart) {
+        callbackStart();
+      }
     }else{
-      this.elem.classList.add(this.first_class);
+      param.elem.classList.add(param.first_class);
+      if (callbackEnd) {
+        callbackEnd();
+      }
     }
 
     window.addEventListener('scroll', () => {
 
-      if(window.pageYOffset > this.height &&  this.active_class === this.first_class){
-        this.elem.classList.add(this.second_class);
-        this.active_class = this.second_class;
-      }else if(window.pageYOffset < this.height && this.active_class === this.second_class ){
-        this.elem.classList.remove(this.second_class);
-        this.active_class = this.first_class;
+      if(window.pageYOffset > param.height &&  param.active_class === param.first_class){
+        param.elem.classList.add(param.second_class);
+        param.active_class = param.second_class;
+        if (callbackStart) {
+          callbackStart();
+        }
+      }else if(window.pageYOffset < param.height && param.active_class === param.second_class ){
+        param.elem.classList.remove(param.second_class);
+        param.active_class = param.first_class;
+        if (callbackEnd) {
+          callbackEnd();
+        }
       }
 
-	});  
+	});
   }
-}  
+}

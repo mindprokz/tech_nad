@@ -1,0 +1,64 @@
+#spec .container-fixed {
+  background: $white;
+  padding-bottom: 90px;
+}
+
+#spec .specs {
+  padding-top: 70px;
+}
+
+#spec .specs .spec {
+  float: left;
+  width: 180px;
+  margin-left: 6px;
+  margin-right: 6px;
+  text-align: center;
+
+  .photo {
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 25px;
+
+    .line {
+      width: 90%;
+      height: 90%;
+      border: 2px solid rgba($white, 0.6);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .status {
+    font-size: 15px;
+    color: #f24b10;
+    padding-bottom: 12px;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
+  .name {
+    font-size: 16px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    padding-bottom: 35px;
+    color: $gray_text;
+  }
+
+  .stage {
+    font-size: 15px;
+    color: $gray_text;
+    padding-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .text {
+    font-size: 15px;
+    color: $gray_text;
+    padding-bottom: 20px;
+  }
+}

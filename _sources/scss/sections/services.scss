@@ -1,0 +1,72 @@
+#services .container-fixed {
+  background: #f5f5f5;
+  padding-bottom: 70px;
+}
+
+#services .serv_info {
+  padding-top: 70px;
+  float: left;
+}
+
+#services .serv_info .serv_list {
+  width: 495px;
+  float: left;
+}
+
+#services .serv_info .list {
+  height: 85px;
+  float: left;
+  margin-top: 10px;
+
+  .text {
+    font-size: 20px;
+    float: left;
+    margin-top: 16px;
+    line-height: 25px;
+    width: 388px;
+    color: $gray_text;
+  }
+
+  .icon_1 {
+    background: url($sprite) no-repeat -512px -132px;
+    height: 82px;
+    width: 82px;
+    float: left;
+    margin-right: 25px;
+  }
+
+  .icon_2 {
+    background: url($sprite) no-repeat -604px -132px;
+    height: 82px;
+    width: 82px;
+    float: left;
+    margin-right: 25px;
+  }
+}
+
+#services .serv_info .for_who {
+  float: left;
+  width: 440px;
+  border-left: 1px solid #d0d0d0;
+  height: 190px;
+  padding-left: 35px;
+  padding-top: 15px;
+
+  h3 {
+    font-size: 40px;
+    color: #414141;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 45px;
+
+    i {
+      color: $light_red;
+    }
+  }
+
+  p {
+    font-size: 19px;
+    color: $gray_text;
+    line-height: 25px;
+  }
+}

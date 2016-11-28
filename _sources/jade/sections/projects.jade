@@ -1,0 +1,46 @@
+section#projects
+  a(name="project")
+  .container-fixed
+    .container
+      h2 Проекты 
+      .shape
+        .name!="<b>Объект:</b> <span>Детский сад на 240 мест</span>"
+        .order.buyer!="<b>Заказчик:</b> <span>ГУ «Управление строительства города Астаны»</span>"
+        .year.buyer!="<b>Год:</b> <span>2016</span>"
+        .buyer!="<b>Выполненные работы:</b> технический надзор"
+      .slider
+        .left
+        .list_slides
+          .wrap
+            .list_elem(data-object="Детский сад на 240 мест" data-order="ГУ «Управление строительства города Астаны»" data-year="2016" data-video="sad.mp4" data-type="video")
+              img(src="images/sad.jpg")
+              .dark
+            .list_elem(data-object="Жилой комплекс «Авиценна - 2»" data-order="ТОО «Стройинвест – СК»" data-year="2016" data-video="avic.mp4" data-type="video")
+              img(src="images/avic.jpg")
+              .dark
+            .list_elem(data-object="Школа на 1200 мест" data-order="ГУ «Управление строительства города Астаны»" data-year="2016" data-video="school.mp4" data-type="video")
+              img(src="images/school.jpg")
+              .dark
+            .list_elem(data-object="Торговая галерея «Festival Avenue»" data-order="ТОО «White Gold Development»" data-year="2016" data-video="festival.mp4" data-type="video")
+              img(src="images/festival.jpg")
+              .dark
+            .list_elem(data-object="Бизнес центр «Sensata Center»" data-order="ТОО «Sensata Center»" data-year="2016" data-video="sansata.mp4" data-type="video")
+              img(src="images/sansata.jpg")
+              .dark
+            .list_elem(data-object="Нац. центр биотехнологии" data-order="РГП «Национальный центр биотехнологии» Комитета науки Министерства образования и науки Республики Казахстан" data-year="2016" data-video="bio.mp4" data-type="video")
+              img(src="images/bio.jpg")
+              .dark
+            .list_elem(data-object="Восточный фланг Центрального месторождения Мынкудук" data-order="АО НАК Казатомпром" data-year="2016" data-type="image" data-range="7" data-name_folder="vost")
+              img(src="images/vost.jpg")
+              .dark
+            .list_elem(data-object="Западный фланг Центрального месторождения Мынкудук" data-order="АО НАК Казатомпром" data-year="2016" data-type="image" data-range="8" data-name_folder="zapad")
+              img(src="images/zapad.jpg")
+              .dark
+              .dark
+            .list_elem(data-object="Центральное месторождение Мынкудук. Инженерные сети" data-order="АО НАК Казатомпром" data-year="2016" data-type="image" data-range="7" data-name_folder="web")
+              img(src="images/web.jpg")
+              .dark
+        .right
+      .thumbnail
+        video#thumbvideo(src="videos/sad.mp4" preload loop autoplay)
+        img#thumbimage(src="images/thimbnail.jpg")

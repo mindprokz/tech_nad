@@ -1,4 +1,4 @@
-@import 
+@import
   'sass/_susy.scss',
   'sections/reset.scss',
   'sections/mail';
@@ -9,17 +9,76 @@ $susy: (
   gutter-position: outside,
 );
 
-$container: 1170px;
+$container: 980px;
 $container-float: 100%;
 
-.container-float{
+$sprite: 'images/sprite.png';
+
+$white: #fff;
+$light_red: #e5322d;
+$dark_red: #c31510;
+$gray_body: #e1e1e1;
+$gray_text: #3b3b3b;
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+b {
+  font-weight: 700;
+}
+
+body {
+  overflow-x: hidden;
+  background: $gray_body;
+  font-family: Roboto, sans-serif;
+}
+
+.container-float {
   @include container($container-float);
 }
 
-.container{
+.container {
   @include container($container);
-}  
 
-.test{
-  @include span(6);	
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: auto;
+  position: relative;
+  height: 100%;
 }
+
+.container-fixed {
+  max-width: 1300px;
+  margin: auto;
+  position: relative;
+  height: 100%;
+}
+
+h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  padding-top: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #474747;
+}
+
+@import
+  'sections/navigation',
+  'sections/main',
+  'sections/video',
+  'sections/services',
+  'sections/advantages',
+  'sections/feedback',
+  'sections/spec',
+  'sections/acrred',
+  'sections/projects',
+  'sections/reviews',
+  'sections/map',
+  'sections/footer';

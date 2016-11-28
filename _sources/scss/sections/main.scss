@@ -1,0 +1,65 @@
+#main {
+  background: url('images/header.jpg') no-repeat center center;
+  background-size: cover;
+  height: 665px;
+  padding-top: 255px;
+}
+
+#main h1 {
+  background: url($sprite) no-repeat 0 0;
+  width: 710px;
+  height: 130px;
+  color: $white;
+  padding-left: 40px;
+  font-size: 43px;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+
+#main .icon_list {
+  position: relative;
+  padding-top: 150px;
+  height: 282px;
+
+  .line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  .icon1 {
+    background: url($sprite) no-repeat 0 -130px;
+    width: 265px;
+    height: 130px;
+    float: left;
+  }
+
+  .icon2 {
+    background: url($sprite) no-repeat -265px -130px;
+    width: 121px;
+    height: 130px;
+    float: left;
+  }
+
+  .icon3 {
+    background: url($sprite) no-repeat -386px -130px;
+    width: 121px;
+    height: 130px;
+    float: left;
+  }
+
+  .icon4 {
+    background: url($sprite) no-repeat 0 -260px;
+    width: 237px;
+    height: 130px;
+    float: left;
+  }
+
+  .icon5 {
+    background: url($sprite) no-repeat -237px -260px;
+    width: 216px;
+    height: 130px;
+    float: left;
+  }
+}
