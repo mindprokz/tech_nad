@@ -58,34 +58,6 @@
 
 	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
-	//   $(document).ready(function () {
-	//     'use strict';
-	// //Аякс отправка форм
-	//     $("#application").submit(function () {
-	//       var data = {
-	//         name : document.querySelector('input[name="name"]').value,
-	//         email : document.querySelector('input[name="email"]').value,
-	//         telephone : document.querySelector('input[name="telephone"]').value
-	//       };
-	//       $.ajax({
-	//         type: "POST",
-	//         url: "mail.php",
-	//         data: data
-	//       }).done(function (value) {
-	//         $('#mail')[0].innerHTML = value;
-	//         $('#mail').removeClass('not_visible_mail');
-	//         setTimeout(function () {
-	//           $("#form").trigger("reset");
-	//         }, 1000);
-	//       });
-	//     return false;
-	//     });
-	//  function  test() {
-	// 	console.log('test!');
-	// }
-	//         $("img, a").on("dragstart", function (event) { event.preventDefault(); });
-	//   });
-
 	function changeMenuUp() {
 	  document.querySelector('#navigation img').src = 'images/logo_small.jpg';
 	}
@@ -106,14 +78,6 @@
 	  $('html, body').animate({ scrollTop: $('a[name="' + this.hash.slice(1) + '"]').offset().top - 93 }, 1000);
 	  return false;
 	});
-	// Отправка формы обратной связи скрипту для отправления по почте
-	// let data = {
-	//   name : 'input[name="name"]',
-	//   email : 'input[name="email"]',
-	//   telephone : 'input[name="telephone"]'
-	// };
-	//
-	// new SendFunc('application', data, 'mail');
 
 	// fancybox
 	$(".fancybox").click(function () {
@@ -197,6 +161,18 @@
 	    var left = parseInt(document.querySelector('#projects .list_slides .wrap').style.left);
 	    document.querySelector('#projects .list_slides .wrap').style.left = left - 380 + 'px';
 	  }
+	});
+
+	// accred slide
+	[].concat(_toConsumableArray(document.querySelectorAll('#accred .container .ol .li'))).forEach(function (elem) {
+	  elem.addEventListener('click', function (e) {
+	    document.querySelector('#accred .container .li.active').classList.remove('active');
+	    e.path[0].classList.add('active');
+
+	    document.querySelector('#accred .container a img').src = 'images/' + e.path[0].dataset.img + '.png';
+
+	    document.querySelector('#accred .container a').setAttribute('href', 'images/' + e.path[0].dataset.link + '.jpg');
+	  });
 	});
 
 /***/ },
