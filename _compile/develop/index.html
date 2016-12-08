@@ -5,7 +5,7 @@
     <meta name="description" content="">
     <meta name="Keywords" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=980px, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=1170px, initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
@@ -13,15 +13,15 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700&amp;amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="libs/fancybox/source/jquery.fancybox.css">
+    <link rel="stylesheet" href="libs/fancybox/source/jquery.fancybox.css"><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NB9W8MG');</script>
   </head>
   <body>
     <section id="navigation" class="menu_fixed_on_top">
-      <div class="container"><a href="#top"><img src="images/logo_big.png"></a>
+      <div class="container"><a href="#top"><img src="images/logo_big.png" class="big"></a><a href="#top"><img src="images/logo_small.jpg" class="small"></a>
         <nav><a href="#service">Услуги</a><a href="#advantages">Преимущества</a><a href="#spec">Специалисты</a><a href="#accred">Аккредитация</a><a href="#project">Проекты</a><a href="#reviews">Отзывы</a><a href="#contact">Контакты</a></nav>
         <div class="contact">
           <div class="num">+7 702 <b>345-45-45</b></div>
-          <div class="mail">texservice@corp.ru</div>
+          <div class="mail">info@promtehservis.kz</div>
         </div>
       </div>
     </section>
@@ -42,7 +42,7 @@
     <section id="video">
       <video preload autoplay loop src="site.mp4"></video>
       <div class="dark"></div>
-      <div class="container"><a href="https://www.youtube.com/embed/7i9BZnA0lwc?autoplay=1" class="fancybox fancybox.iframe button">Посмотреть видео</a></div>
+      <div class="container"><a href="https://www.youtube.com/embed/ZnxpHjCfBaw?autoplay=1" class="fancybox fancybox.iframe button">Посмотреть видео</a></div>
     </section>
     <section id="services"><a name="service"></a>
       <div class="container-fixed">
@@ -79,7 +79,7 @@
             <div class="elem_list">
               <div class="point">»</div>
               <h3>Контроль качества</h3>
-              <p>Мы проверяем все материалы и оборудование на соответсвие заявленным в смете.</p>
+              <p>Мы проверяем все материалы и оборудование на соответствие заявленным в смете.</p>
             </div>
             <div class="elem_list">
               <div class="point">»</div>
@@ -127,15 +127,15 @@
             <h3>Оставьте заявку и наш специалист проконсультирует вас</h3>
             <div class="line"></div>
           </header>
-          <form action="">
+          <form id="form_feed">
             <label class="name">
-              <input type="text" required placeholder="Имя">
+              <input type="text" name="name" required placeholder="Имя">
             </label>
             <label class="tel">
-              <input type="tel" required placeholder="Телефон">
+              <input type="tel" name="telephone" required placeholder="Телефон">
             </label>
             <label class="mail">
-              <input type="mail" required placeholder="E-mail">
+              <input type="mail" name="email" required placeholder="E-mail">
             </label>
             <button>Отправить</button>
           </form>
@@ -357,10 +357,11 @@
         <div class="copyright">ТОО <b>«СК ПромТехСервис»</b> — 2016</div><a href="http://mindpro-group.com"><img src="images/copyright.png" class="mind_copyright"></a>
       </div>
     </footer>
+    <div id="mail" class="not_visible_mail"></div>
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="libs/fancybox/source/jquery.fancybox.pack.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkS0y-j9aq7GAuQPJJy5uhEiVKIWBcTM4"></script>
-    <script src="bundle.js"></script>
+    <script src="bundle.js"></script><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB9W8MG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!--
     div.main
       h3="Внимание"

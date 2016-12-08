@@ -1,5 +1,9 @@
-import SendFunc from './sendForm.js';
-import FloatMenu from './floatMenu.js';
+import SendFunc from './sendForm.js'
+import FloatMenu from './floatMenu.js'
+import numberChangeCrm from './numbers_crm.js'
+
+numberChangeCrm([document.querySelector('#map_contact .contact h4'),
+  document.querySelector('#navigation .contact .num')]);
 
 function changeMenuUp() {
   document.querySelector('#navigation img').src = 'images/logo_small.jpg';
@@ -11,13 +15,21 @@ new FloatMenu().init({
   height : 120,
   first_class : 'menu_fixed_on_top',
   second_class : 'float_menu'
-}, () => document.querySelector('#navigation img').src = 'images/logo_small.jpg', () => document.querySelector('#navigation img').src = 'images/logo_big.png');
+});
 
 
 $('a[href^="#"]').on('click', function () {
 	$('html, body').animate({ scrollTop:  $('a[name="'+this.hash.slice(1)+'"]').offset().top - 93 }, 1000 );
 	return false;
 });
+
+let dates = {
+  name: document.querySelector('#feedback form .name input').value,
+  telephone: document.querySelector('#feedback form .tel input').value,
+  email: document.querySelector('#feedback form .mail input').value
+}
+
+new SendFunc('form_feed', dates, 'mail');
 
 // fancybox
 $(".fancybox").click(function() {

@@ -5,11 +5,11 @@ section#feedback
       header
         h3 Оставьте заявку и наш специалист проконсультирует вас
         .line
-      form(action="")
+      form(id="form_feed")
         label.name
-          input(type="text" required placeholder="Имя")
+          input(type="text" name="name" required placeholder="Имя")
         label.tel
-          input(type="tel" required placeholder="Телефон")
+          input(type="tel" name="telephone" required placeholder="Телефон")
         label.mail
-          input(type="mail" required placeholder="E-mail")
+          input(type="mail" name="email" required placeholder="E-mail")
         button Отправить

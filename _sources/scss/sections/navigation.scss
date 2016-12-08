@@ -3,6 +3,22 @@
   top: 0;
   width: 100%;
   z-index: 100;
+
+  .big {
+    position: absolute;
+    top: 0;
+    transition: top 0.3s ease;
+  }
+
+  .small {
+    padding-right: 140px;
+  }
+
+  &.float_menu {
+    .big {
+      top: -200px;
+    }
+  }
 }
 
 #navigation .container {

@@ -54,9 +54,15 @@
 
 	var _floatMenu2 = _interopRequireDefault(_floatMenu);
 
+	var _numbers_crm = __webpack_require__(3);
+
+	var _numbers_crm2 = _interopRequireDefault(_numbers_crm);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+	(0, _numbers_crm2.default)([document.querySelector('#map_contact .contact h4'), document.querySelector('#navigation .contact .num')]);
 
 	function changeMenuUp() {
 	  document.querySelector('#navigation img').src = 'images/logo_small.jpg';
@@ -68,16 +74,20 @@
 	  height: 120,
 	  first_class: 'menu_fixed_on_top',
 	  second_class: 'float_menu'
-	}, function () {
-	  return document.querySelector('#navigation img').src = 'images/logo_small.jpg';
-	}, function () {
-	  return document.querySelector('#navigation img').src = 'images/logo_big.png';
 	});
 
 	$('a[href^="#"]').on('click', function () {
 	  $('html, body').animate({ scrollTop: $('a[name="' + this.hash.slice(1) + '"]').offset().top - 93 }, 1000);
 	  return false;
 	});
+
+	var dates = {
+	  name: document.querySelector('#feedback form .name input').value,
+	  telephone: document.querySelector('#feedback form .tel input').value,
+	  email: document.querySelector('#feedback form .mail input').value
+	};
+
+	new _sendForm2.default('form_feed', dates, 'mail');
 
 	// fancybox
 	$(".fancybox").click(function () {
@@ -190,32 +200,25 @@
 	var sendForm = function sendForm(id, dates, idMail) {
 	  _classCallCheck(this, sendForm);
 
-	  document.getElementById(id).addEventListener('submit', function () {
+	  document.getElementById(id).addEventListener('submit', function (e) {
+	    e.preventDefault();
 
-	    var data = {
-	      name: document.querySelector(dates.name.value),
-	      email: document.querySelector(dates.email.value),
-	      telephone: document.querySelector(dates.telephone.value)
-	    };
+	    var data = dates;
 
-	    $("#application").submit(function () {
-	      $.ajax({
-	        type: "POST",
-	        url: "mail.php",
-	        data: data
-	      }).done(function (value) {
-	        var mail = document.getElementById(idMail);
+	    $.ajax({
+	      type: "POST",
+	      url: "mail.php",
+	      data: data
+	    }).done(function (value) {
+	      var mail = document.getElementById(idMail);
 
-	        mail.innerHTML = value;
-	        mail.classList.remove('not_visible_mail');
+	      mail.innerHTML = value;
+	      mail.classList.remove('not_visible_mail');
 
-	        setTimeout(function () {
-	          $("#" + id).trigger("reset");
-	          mail.classList.add('not_visible_mail');
-	        }, 1000);
-	      });
-
-	      return false;
+	      setTimeout(function () {
+	        $("#" + id).trigger("reset");
+	        mail.classList.add('not_visible_mail');
+	      }, 2000);
 	    });
 	  });
 	};
@@ -291,6 +294,36 @@
 	}();
 
 	exports.default = FloatMenu;
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	exports.default = function () {
+	  var elems = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+
+	  var num = '';
+
+	  if (document.referrer.search(/yandex/) !== -1) {
+	    num = '+7 7172 772-723';
+	  } else if (document.referrer.search(/google/) !== -1) {
+	    num = '+7 7172 772-725';
+	  } else if (document.referrer.search(/facebook/) !== -1) {
+	    num = '+7 7172 772-724';
+	  } else {
+	    num = '+7 7172 772-725';
+	  }
+
+	  elems.forEach(function (elem) {
+	    elem.innerHTML = num;
+	  });
+	};
 
 /***/ }
 /******/ ]);
