@@ -23,13 +23,7 @@ $('a[href^="#"]').on('click', function () {
 	return false;
 });
 
-let dates = {
-  name: document.querySelector('#feedback form .name input').value,
-  telephone: document.querySelector('#feedback form .tel input').value,
-  email: document.querySelector('#feedback form .mail input').value
-}
-
-new SendFunc('form_feed', dates, 'mail');
+new SendFunc('form_feed', null, 'mail');
 
 // fancybox
 $(".fancybox").click(function() {

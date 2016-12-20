@@ -3,12 +3,14 @@ export default class sendForm {
     document.getElementById(id).addEventListener('submit', (e) => {
       e.preventDefault();
 
-      let data = dates;
-
       $.ajax({
         type: "POST",
         url: "mail.php",
-        data: data
+        data: {
+          name: document.querySelector('#feedback form .name input').value,
+          telephone: document.querySelector('#feedback form .tel input').value,
+          email: document.querySelector('#feedback form .mail input').value
+        }
       }).done(function (value) {
         let mail = document.getElementById(idMail);
 
@@ -20,6 +22,9 @@ export default class sendForm {
           mail.classList.add('not_visible_mail');
         }, 2000);
       });
+
+      yaCounter41437109.reachGoal('forms');
+      ga('send', 'event', 'forms', 'submit');
     });
   }
 }

@@ -81,13 +81,7 @@
 	  return false;
 	});
 
-	var dates = {
-	  name: document.querySelector('#feedback form .name input').value,
-	  telephone: document.querySelector('#feedback form .tel input').value,
-	  email: document.querySelector('#feedback form .mail input').value
-	};
-
-	new _sendForm2.default('form_feed', dates, 'mail');
+	new _sendForm2.default('form_feed', null, 'mail');
 
 	// fancybox
 	$(".fancybox").click(function () {
@@ -203,12 +197,14 @@
 	  document.getElementById(id).addEventListener('submit', function (e) {
 	    e.preventDefault();
 
-	    var data = dates;
-
 	    $.ajax({
 	      type: "POST",
 	      url: "mail.php",
-	      data: data
+	      data: {
+	        name: document.querySelector('#feedback form .name input').value,
+	        telephone: document.querySelector('#feedback form .tel input').value,
+	        email: document.querySelector('#feedback form .mail input').value
+	      }
 	    }).done(function (value) {
 	      var mail = document.getElementById(idMail);
 
@@ -220,6 +216,9 @@
 	        mail.classList.add('not_visible_mail');
 	      }, 2000);
 	    });
+
+	    yaCounter41437109.reachGoal('forms');
+	    ga('send', 'event', 'forms', 'submit');
 	  });
 	};
 

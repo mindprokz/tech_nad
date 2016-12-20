@@ -1,12 +1,12 @@
-
 <?php
+
 $sendto   = "info@promtehservis.kz"; // почта, на которую будет приходить письмо
 $username = $_POST['name'];   // сохраняем в переменную данные полученные из поля c именем
 $usertel = $_POST['telephone']; // сохраняем в переменную данные полученные из поля c телефонным номером
 $usermail = $_POST['email']; // сохраняем в переменную данные полученные из поля c адресом электронной почты
 
 // Формирование заголовка письма
-$subject  = "Новое сообщение";
+$subject  = "Новое сообщение с сайта";
 $headers  = "From: " . strip_tags($sendto) . "\r\n";
 $headers .= "Reply-To: ". strip_tags($usermail) . "\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
@@ -26,7 +26,7 @@ if(@mail($sendto, $subject, $msg, $headers)) {
 	echo '<div class="message">
 			<img src="images/ok.png" alt="">
 			<div class="message_text">
-				<h3>Спасибо за заявку'.$_POST['name'].'</h3>
+				<h3>Спасибо за заявку'.$username.'</h3>
 				<p>Мы свяжемся с вами в ближайшее время</p>
 			</div>
 		</div>';
