@@ -1,9 +1,9 @@
 import SendFunc from './sendForm.js'
 import FloatMenu from './floatMenu.js'
-import numberChangeCrm from './numbers_crm.js'
+//import numberChangeCrm from './numbers_crm.js'
 
-numberChangeCrm([document.querySelector('#map_contact .contact h4'),
-  document.querySelector('#navigation .contact .num')]);
+// numberChangeCrm([document.querySelector('#map_contact .contact h4'),
+//   document.querySelector('#navigation .contact .num')]);
 
 function changeMenuUp() {
   document.querySelector('#navigation img').src = 'images/logo_small.jpg';
@@ -119,6 +119,10 @@ document.querySelector('#projects .slider .right').addEventListener('click', () 
       .src = `images/${e.path[0].dataset.img}.png`;
 
     document.querySelector('#accred .container a')
-      .setAttribute('href', `images/${e.path[0].dataset.link}.jpg`)
+      .setAttribute('href', `images/${e.path[0].dataset.link}.jpg`);
+
+    document.querySelector('#accred p')
+      .textContent = `Деятельность осуществляется на основании
+        свидетельства об аккредитации ${e.path[0].dataset.head}`;
   });
 });

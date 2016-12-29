@@ -54,15 +54,14 @@
 
 	var _floatMenu2 = _interopRequireDefault(_floatMenu);
 
-	var _numbers_crm = __webpack_require__(3);
-
-	var _numbers_crm2 = _interopRequireDefault(_numbers_crm);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
-	(0, _numbers_crm2.default)([document.querySelector('#map_contact .contact h4'), document.querySelector('#navigation .contact .num')]);
+	//import numberChangeCrm from './numbers_crm.js'
+
+	// numberChangeCrm([document.querySelector('#map_contact .contact h4'),
+	//   document.querySelector('#navigation .contact .num')]);
 
 	function changeMenuUp() {
 	  document.querySelector('#navigation img').src = 'images/logo_small.jpg';
@@ -176,6 +175,8 @@
 	    document.querySelector('#accred .container a img').src = 'images/' + e.path[0].dataset.img + '.png';
 
 	    document.querySelector('#accred .container a').setAttribute('href', 'images/' + e.path[0].dataset.link + '.jpg');
+
+	    document.querySelector('#accred p').textContent = '\u0414\u0435\u044F\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C \u043E\u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043B\u044F\u0435\u0442\u0441\u044F \u043D\u0430 \u043E\u0441\u043D\u043E\u0432\u0430\u043D\u0438\u0438\n        \u0441\u0432\u0438\u0434\u0435\u0442\u0435\u043B\u044C\u0441\u0442\u0432\u0430 \u043E\u0431 \u0430\u043A\u043A\u0440\u0435\u0434\u0438\u0442\u0430\u0446\u0438\u0438 ' + e.path[0].dataset.head;
 	  });
 	});
 
@@ -293,36 +294,6 @@
 	}();
 
 	exports.default = FloatMenu;
-
-/***/ },
-/* 3 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	exports.default = function () {
-	  var elems = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-
-	  var num = '';
-
-	  if (document.referrer.search(/yandex/) !== -1) {
-	    num = '+7 7172 772-723';
-	  } else if (document.referrer.search(/google/) !== -1) {
-	    num = '+7 7172 772-725';
-	  } else if (document.referrer.search(/facebook/) !== -1) {
-	    num = '+7 7172 772-724';
-	  } else {
-	    num = '+7 7172 772-725';
-	  }
-
-	  elems.forEach(function (elem) {
-	    elem.innerHTML = num;
-	  });
-	};
 
 /***/ }
 /******/ ]);
