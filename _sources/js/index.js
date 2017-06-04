@@ -1,9 +1,9 @@
 import SendFunc from './sendForm.js'
 import FloatMenu from './floatMenu.js'
-//import numberChangeCrm from './numbers_crm.js'
+import numberChangeCrm from './numbers_crm.js'
 
-// numberChangeCrm([document.querySelector('#map_contact .contact h4'),
-//   document.querySelector('#navigation .contact .num')]);
+ // numberChangeCrm([document.querySelector('#map_contact .contact h4'),
+ //   document.querySelector('#navigation .contact .num')]);
 
 function changeMenuUp() {
   document.querySelector('#navigation img').src = 'images/logo_small.jpg';
